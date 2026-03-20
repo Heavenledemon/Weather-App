@@ -18,7 +18,7 @@ const WeatherUi = () => {
             setLoading(true)
             setError(null)
             try {
-                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}&units=metric`)
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
                 const data = await response.json()
                 if (data.cod !== 200) {
                     setError(data.message)
